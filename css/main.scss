@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;300;400;500;600;800&display=swap');
+}
+
+:root {
+    --principal: #fffddf;
+    --black: #131313;
+    --white: #eeeeee;
+    --highlight: #fafa6d;
+}
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, .076, 1)) {
+    transition: $property $duration $ease;
+}
+
+body {
+    height: 100%;
+    background-color: var(--principal);
+    font-family: Noto Serif Display;
+    overflow: hidden;
+
+    width: 100%;
+}
+
+header {
+    height: 10%;
+    color: var(--black);
+    padding: 2rem 5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    box-shadow: rgba(19, 19, 19, 0.3) 0px -1px 0px 0px inset;
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+
+    &.learn-more {
+        width: 12rem;
+        height: auto;
+
+        .circle {
+            @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: var(--black);
+            border-radius: 1.625rem;
+
+            .icon {
+                @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: var(--principal);
+
+                &.arrow {
+                    @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+                    left: 0.625rem;
+                    width: 1.125rem;
+                    height: 0.125rem;
+                    background: none;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: -0.25rem;
+                        right: 0.0625rem;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        border-top: 0.125rem solid #fff;
+                        border-right: 0.125rem solid #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .button-text {
+            @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: var(--black);
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+        }
+    }
+
+    &:hover {
+        .circle {
+            width: 100%;
+
+            .icon {
+                &.arrow {
+                    background: var(--principal);
+                    transform: translate(1rem, 0);
+                }
+            }
+        }
+
+        .button-text {
+            color: var(--principal);
+        }
+    }
+}
+
+main {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.texts {
+    padding: 0 5rem;
+}
+
+.mainText {
+    font-size: 5rem;
+    color: var(--black);
+    align-self: left;
+    text-align: left;
+}
+
+.secondaryText {
+    margin-top: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.mainText span {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, var(--highlight) 50%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    animation: highlighter 120s ease-out;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+
+    margin-top: -15%;
+}
+
+@keyframes highlighter {
+    0% {
+        background-position: -0% 0;
+    } 1% {
+        background-position: -99.99% 0;
+    } 100% {
+        background-position: -99.99% 0;
+    }
+}

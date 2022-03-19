@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;300;400;500;600;800&display=swap');
+}
+
+:root {
+    --principal: #fffddf;
+    --black: #131313;
+    --white: #eeeeee;
+    --highlight: #fafa6d;
+}
+
+html {
+    background-color: var(--principal);
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    background-color: var(--principal);
+    font-family: Noto Serif Display;
+    overflow: hidden;
+
+    width: 100%;
+}
+
+header {
+    height: 10%;
+    color: var(--black);
+    padding: 3rem 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: rgba(19, 19, 19, 0.3) 0px -1px 0px 0px inset;
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3.5%;
+}
+
+.timer {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#js-mode-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    padding: .8rem 2.5rem;
+    border-radius: 1.625rem;
+    background: var(--black);
+    color: var(--principal);
+    font-family: Noto Serif Display;
+    font-weight: 600;
+    transition: all .3s;
+    border: 2px solid var(--black);
+}
+
+button:hover {
+    background: var(--principal);
+    color: var(--black);
+}
+
+.clock {
+    font-size: 10rem;
+    padding: 4rem 0;
+}

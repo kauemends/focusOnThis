@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>focusOnThis</title>
+    <link rel="stylesheet" href="css/timer.css">
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+  </head>
+  <body>
+      <header>
+        <h1 id="logo">focusOnThis</h1>
+    </header>
+
+    <main class="app">
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            Pomodoro
+          </button>
+          <button
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="js-short-break"
+          >
+            Short break
+          </button>
+          <button
+            data-mode="longBreak"
+            class="button mode-button"
+            id="js-long-break"
+          >
+            Long break
+          </button>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </main>
+    <div class="hidden">
+      <audio src="assets/backtowork.mp3" data-sound="pomodoro"></audio>
+      <audio src="assets/break.mp3" data-sound="shortBreak"></audio>
+      <audio src="assets/break.mp3" data-sound="longBreak"></audio>
+    </div>
+    <script src="/public/timer.js"></script>
+  </body>
+</html>

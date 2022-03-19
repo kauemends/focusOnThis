@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;300;400;500;600;800&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+}
+
+:root {
+  --principal: #fffddf;
+  --black: #131313;
+  --white: #eeeeee;
+  --highlight: #fafa6d;
+}
+
+body {
+  height: 100%;
+  background-color: var(--principal);
+  font-family: Noto Serif Display;
+  overflow: hidden;
+  width: 100%;
+}
+
+header {
+  height: 10%;
+  color: var(--black);
+  padding: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: rgba(19, 19, 19, 0.3) 0px -1px 0px 0px inset;
+          box-shadow: rgba(19, 19, 19, 0.3) 0px -1px 0px 0px inset;
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--black);
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: var(--principal);
+}
+
+button.learn-more .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: var(--principal);
+  -webkit-transform: translate(1rem, 0);
+          transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: var(--principal);
+}
+
+main {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.texts {
+  padding: 0 5rem;
+}
+
+.mainText {
+  font-size: 5rem;
+  color: var(--black);
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  text-align: left;
+}
+
+.secondaryText {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: right;
+}
+
+.mainText span {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, var(--highlight)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, var(--highlight) 50%);
+  background-position: -0% 0;
+  background-size: 200% auto;
+  -webkit-animation: highlighter 120s ease-out;
+          animation: highlighter 120s ease-out;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  margin-top: -15%;
+}
+
+@-webkit-keyframes highlighter {
+  0% {
+    background-position: -0% 0;
+  }
+  1% {
+    background-position: -99.99% 0;
+  }
+  100% {
+    background-position: -99.99% 0;
+  }
+}
+
+@keyframes highlighter {
+  0% {
+    background-position: -0% 0;
+  }
+  1% {
+    background-position: -99.99% 0;
+  }
+  100% {
+    background-position: -99.99% 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
