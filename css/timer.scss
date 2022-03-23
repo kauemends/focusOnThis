@@ -93,3 +93,83 @@ button:hover {
     font-size: 10rem;
     padding: 4rem 0;
 }
+
+@media (max-width: 1100px) {
+    #js-mode-buttons {
+        width: 75%;
+    }
+
+    .clock {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 770px) {
+    #js-mode-buttons {
+        width: 90%;
+    }
+
+    .clock {
+        font-size: 12rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin-top: -7%;
+    }
+
+    #js-mode-buttons {
+        width: 95%;
+    }
+
+    .clock {
+        font-size: 7rem;
+    }
+
+    button {
+        font-size: .75rem;
+        border-radius: 1.4rem;    
+        padding: .5rem 1.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    main {
+        margin-top: -7%;
+    }
+
+    #js-mode-buttons {
+        width: 100%;
+    }
+
+    .clock {
+        font-size: 5.5rem;
+    }
+
+    button {
+        font-size: .65rem;
+        border-radius: 1.2rem;
+        padding: .5rem 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        margin-top: -7%;
+    }
+
+    #js-mode-buttons {
+        width: 100%;
+    }
+
+    .clock {
+        font-size: 5.5rem;
+    }
+
+    button {
+        font-size: .6rem;
+        border-radius: 1.2rem;
+        padding: .5rem 1rem;
+    }
+}
